@@ -1,0 +1,53 @@
+#Materials
+
+###Get materials
+GET http://localhost:8888/materials
+
+###Get materials with id
+GET http://localhost:8888/materials/all
+
+###Get material by id
+GET http://localhost:8888/materials/1
+
+###Delete by id
+DELETE http://localhost:8888/materials/1
+
+###Material 1
+POST http://localhost:8888/materials
+Content-Type: application/json
+
+{
+  "name": "Цемент",
+  "price": 50,
+  "service_id": 1
+}
+
+###Material 1 update
+PUT http://localhost:8888/materials/2
+Content-Type: application/json
+
+{
+  "name": "Цемент",
+  "price": 60,
+  "service_id": 3
+}
+
+###Material 2
+POST http://localhost:8888/materials
+Content-Type: application/json
+
+{
+  "name": "Светоотверждающий материал",
+  "price": 500,
+  "service_id": 1
+}
+
+###Material 2
+POST http://localhost:8888/materials
+Content-Type: application/json
+
+{
+  "name": "Титан",
+  "price": 2500,
+  "service_id": 3
+}

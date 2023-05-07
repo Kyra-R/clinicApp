@@ -1,0 +1,63 @@
+#doctor
+###Get doctors
+GET http://localhost:8888/doctors
+
+###Get doctors with id
+GET http://localhost:8888/doctors/all
+
+###Delete doctor by id
+DELETE http://localhost:8888/doctors/1
+
+###Get doctor by id
+GET http://localhost:8888/doctors/1
+
+###Doctor 1
+POST http://localhost:8888/doctors
+Content-Type: application/json
+
+{
+  "name": "Иван",
+  "surname": "Иваноd",
+  "phone_number":"8-800-555-35-35",
+  "specialization": "Эстетическая ст-ия"
+}
+
+###Doctor 1 update
+PUT http://localhost:8888/doctors/1
+Content-Type: application/json
+
+{
+"name": "Иван",
+"surname": "Иванов",
+"phone_number":"8-800-444-32-71",
+"specialization": "Эстетическая ст-ия"
+}
+
+###Doctor 2
+POST http://localhost:8888/doctors
+Content-Type: application/json
+
+{
+  "name": "Петр",
+  "surname": "Петров",
+  "phone_number":"8-800-333-43-00",
+  "specialization": "Хирургическая ст-ия"
+}
+
+###Doctor 3
+POST http://localhost:8888/doctors
+Content-Type: application/json
+
+{
+  "name": "Екатерина",
+  "surname": "Иванова",
+  "phone_number":"8-916-116-01-02",
+  "specialization": "Терапевтическая ст-ия"
+}
+
+###Doctors by type
+GET http://localhost:8888/doctors/type/2
+
+###Doctor' services by id
+GET http://localhost:8888/doctors/2/services
+

@@ -1,0 +1,92 @@
+#medserivces
+###Get medservices
+GET http://localhost:8888/medservices
+
+###Get medservices with id
+GET http://localhost:8888/medservices/all
+
+###Delete service by id
+DELETE http://localhost:8888/medservices/1
+
+###Get service by id
+GET http://localhost:8888/medservices/1
+
+###Service 1
+POST http://localhost:8888/medservices
+Content-Type: application/json
+
+{
+  "name": "Вставка пломбы",
+  "baseprice": 1500,
+  "description":"Вставка пломбы из выбранного материала",
+  "type": 1
+}
+
+###Service 1 update
+PUT http://localhost:8888/medservices/1
+Content-Type: application/json
+
+{
+  "name": "Вставка пломбы",
+  "baseprice": 1200,
+  "description":"Вставка пломбы из выбранного материала",
+  "type": 1
+}
+
+
+
+###Service 2
+POST http://localhost:8888/medservices
+Content-Type: application/json
+
+{
+  "name": "Имплантация",
+  "baseprice": 38000,
+  "description":"Замена выпавшего зуба имплантом",
+  "type": 3
+}
+
+###Service 3
+POST http://localhost:8888/medservices
+Content-Type: application/json
+
+{
+  "name": "Профессиональная чистка",
+  "baseprice": 5000,
+  "description":"Профессиональная чистка всей полости рта",
+  "type": 2
+}
+
+###Service 4
+POST http://localhost:8888/medservices
+Content-Type: application/json
+
+{
+  "name": "Отбеливание",
+  "baseprice": 1800,
+  "description":"Отбеливание зубов",
+  "type": 2
+}
+
+###Service 5
+POST http://localhost:8888/medservices
+Content-Type: application/json
+
+{
+  "name": "Удаление зуба мудрости",
+  "baseprice": 4000,
+  "description":"Удаление зуба проблемного мудрости",
+  "type": 4
+}
+
+###Services by type
+GET http://localhost:8888/medservices/type/2
+
+###Medservices' materials by id
+GET http://localhost:8888/medservices/1/materials
+
+###Medservices' doctors by id
+GET http://localhost:8888/medservices/1/doctors
+
+###full price for service with material
+GET http://localhost:8888/medservices/2/materials/2
