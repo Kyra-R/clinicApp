@@ -27,9 +27,9 @@ public class MedicalService {
     @Column
     private Long baseprice;
 
-
-    private Integer type; //терапевтические - 1, эстетические - 2 имплантация - 3 хирургия (удаление) - 4 ввести тип
-
+    @Column
+    private Integer type; 
+    @Column
     private String description;
 
 
